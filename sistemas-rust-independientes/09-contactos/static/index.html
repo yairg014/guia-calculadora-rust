@@ -1,1 +1,26 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contactos</title><link rel="stylesheet" href="/estilos.css"></head><body><main><header><h1>Agenda de Contactos</h1><p>Contactos personales, categorías y favoritos.</p></header><p class="mensaje">{{MENSAJE}}</p><form action="/guardar" method="post"><input name="nombre" placeholder="Nombre" required><input name="telefono" placeholder="Teléfono" required><input name="correo" type="email" placeholder="Correo" required><input name="categoria" placeholder="Categoría" required><label><input type="checkbox" name="favorito" value="si"> Marcar como favorito</label><textarea name="notas" placeholder="Notas adicionales"></textarea><button>Guardar contacto</button></form></main></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contactos</title>
+<link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+<main>
+<header>
+<h1>Agenda de Contactos</h1>
+<p>Contactos personales, categorías y favoritos.</p>
+</header>
+<p class="mensaje">{{MENSAJE}}</p>
+<form action="/guardar" method="post"><input name="nombre"
+placeholder="Nombre" required=""><input name="telefono"
+placeholder="Teléfono" required=""><input name="correo" type=
+"email" placeholder="Correo" required=""><input name="categoria"
+placeholder="Categoría" required=""><label><input type="checkbox"
+name="favorito" value="si"> Marcar como favorito</label>
+<textarea name="notas" placeholder="Notas adicionales"></textarea>
+<button>Guardar contacto</button></form>
+</main>
+</body>
+</html>

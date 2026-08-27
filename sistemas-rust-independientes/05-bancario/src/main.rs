@@ -15,6 +15,7 @@ struct Movimiento {
     saldo: f64,
 }
 fn main() {
+    // Inicia el servidor web local del sistema bancario.
     let servidor = Server::http("0.0.0.0:8105")
         .expect("No se pudo iniciar el servidor en el puerto 8105. ¿Está ocupado?");
     println!("Bancario: http://localhost:8105");

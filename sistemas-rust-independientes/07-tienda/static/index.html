@@ -1,1 +1,33 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tienda</title><link rel="stylesheet" href="/estilos.css"></head><body><main><header><h1>Sistema de Tienda</h1><p>Caja, productos y tickets de venta.</p></header><p class="mensaje">{{MENSAJE}}</p><section><form action="/producto" method="post"><h2>Agregar producto</h2><input name="codigo" placeholder="Código" required><input name="nombre" placeholder="Producto" required><input name="precio" type="number" min="0" step="0.01" placeholder="Precio" required><input name="stock" type="number" min="0" placeholder="Stock" required><button>Guardar producto</button></form><form action="/venta" method="post"><h2>Nueva venta</h2><input name="codigo" placeholder="Código del producto" required><input name="unidades" type="number" min="1" placeholder="Unidades" required><input name="fecha" type="date" required><button>Generar ticket</button></form></section></main></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tienda</title>
+<link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+<main>
+<header>
+<h1>Sistema de Tienda</h1>
+<p>Caja, productos y tickets de venta.</p>
+</header>
+<p class="mensaje">{{MENSAJE}}</p>
+<section>
+<form action="/producto" method="post">
+<h2>Agregar producto</h2>
+<input name="codigo" placeholder="Código" required=""><input name=
+"nombre" placeholder="Producto" required=""><input name="precio"
+type="number" min="0" step="0.01" placeholder="Precio" required=
+""><input name="stock" type="number" min="0" placeholder="Stock"
+required=""><button>Guardar producto</button></form>
+<form action="/venta" method="post">
+<h2>Nueva venta</h2>
+<input name="codigo" placeholder="Código del producto" required=
+""><input name="unidades" type="number" min="1" placeholder=
+"Unidades" required=""><input name="fecha" type="date" required="">
+<button>Generar ticket</button></form>
+</section>
+</main>
+</body>
+</html>

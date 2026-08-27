@@ -1,2 +1,39 @@
-body{font-family:Arial;background:#06152e;color:white;margin:0}main{max-width:900px;margin:40px auto;background:#fff;color:#06152e;padding:30px;border-top:6px solid #087dff}form{padding:14px;background:#edf6ff;margin:12px 0}input,select,button{padding:9px;margin:4px;border:1px solid #b8d8ff}button{background:#087dff;color:white;border:0}table{width:100%;border-collapse:collapse}td{padding:9px;border-bottom:1px solid #dcecff}
-
+body {
+  font-family: Arial;
+  background: #06152e;
+  color: white;
+  margin: 0;
+}
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  color: #06152e;
+  padding: 30px;
+  border-top: 6px solid #087dff;
+}
+form {
+  padding: 14px;
+  background: #edf6ff;
+  margin: 12px 0;
+}
+input,
+select,
+button {
+  padding: 9px;
+  margin: 4px;
+  border: 1px solid #b8d8ff;
+}
+button {
+  background: #087dff;
+  color: white;
+  border: 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+td {
+  padding: 9px;
+  border-bottom: 1px solid #dcecff;
+}

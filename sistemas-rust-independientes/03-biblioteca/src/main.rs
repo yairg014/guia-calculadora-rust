@@ -17,6 +17,7 @@ struct PrestamoLibro {
     activo: bool,
 }
 fn main() {
+    // Inicia el servidor web local de la biblioteca.
     let s = Server::http("0.0.0.0:8103")
         .expect("No se pudo iniciar el servidor en el puerto 8103. ¿Está ocupado?");
     println!("Biblioteca: http://localhost:8103");

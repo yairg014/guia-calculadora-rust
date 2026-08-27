@@ -15,6 +15,7 @@ struct Cita {
     estado: String,
 }
 fn main() {
+    // Inicia el servidor web local de la clínica.
     let s = Server::http("0.0.0.0:8106")
         .expect("No se pudo iniciar el servidor en el puerto 8106. ¿Está ocupado?");
     println!("Clínica: http://localhost:8106");

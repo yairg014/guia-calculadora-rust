@@ -20,7 +20,9 @@ struct Movimiento {
     fecha: String,
 }
 fn main() {
-    let servidor = Server::http("0.0.0.0:8102").expect("No se pudo iniciar el servidor");
+    // Inicia el servidor web local del inventario.
+    let servidor = Server::http("0.0.0.0:8102")
+        .expect("No se pudo iniciar el servidor en el puerto 8102. ¿Está ocupado?");
     println!("Inventario: http://localhost:8102");
     for mut s in servidor.incoming_requests() {
         let ruta = s.url().to_string();

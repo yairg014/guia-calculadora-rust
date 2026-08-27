@@ -1,1 +1,59 @@
-<!doctype html><html lang=es><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Inventario</title><link rel=stylesheet href=/estilos.css></head><body><main><header><div><span>CONTROL DE MERCANCÍA</span><h1>Inventario</h1></div></header><p class=mensaje>{{MENSAJE}}</p><section class=resumen><div>Valor total<b>$ {{TOTAL}}</b></div><div>Productos bajo mínimo<b>{{BAJO}}</b></div></section><div class=layout><aside><h2>Nuevo producto</h2><form action=/guardar-producto method=post><label>Código</label><input name=codigo maxlength=20 required><label>Nombre</label><input name=nombre maxlength=70 required><label>Categoría</label><input name=categoria maxlength=40 required><label>Stock inicial</label><input name=stock type=number min=0 required><label>Precio unitario</label><input name=precio type=number min=0 step=.01 required><label>Stock mínimo</label><input name=minimo type=number min=0 required><button>Registrar producto</button></form><h2>Últimos movimientos</h2><ol>{{MOVIMIENTOS}}</ol></aside><section><form class=buscar method=get><input name=buscar value="{{BUSCAR}}" placeholder="Buscar producto"><button>Buscar</button></form><div class=scroll><table><thead><tr><th>Código</th><th>Producto</th><th>Stock</th><th>Precio</th><th>Movimientos</th></tr></thead><tbody>{{PRODUCTOS}}</tbody></table></div></section></div></main></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Inventario</title>
+<link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+<main>
+<header>
+<div><span>CONTROL DE MERCANCÍA</span>
+<h1>Inventario</h1>
+</div>
+</header>
+<p class="mensaje">{{MENSAJE}}</p>
+<section class="resumen">
+<div>Valor total<b>$ {{TOTAL}}</b></div>
+<div>Productos bajo mínimo<b>{{BAJO}}</b></div>
+</section>
+<div class="layout">
+<aside>
+<h2>Nuevo producto</h2>
+<form action="/guardar-producto" method="post">
+<label>Código</label><input name="codigo" maxlength="20" required=
+""><label>Nombre</label><input name="nombre" maxlength="70"
+required=""><label>Categoría</label><input name="categoria"
+maxlength="40" required=""><label>Stock inicial</label><input name=
+"stock" type="number" min="0" required=""><label>Precio
+unitario</label><input name="precio" type="number" min="0" step=
+".01" required=""><label>Stock mínimo</label><input name="minimo"
+type="number" min="0" required=""><button>Registrar
+producto</button></form>
+<h2>Últimos movimientos</h2>
+<ol>{{MOVIMIENTOS}}</ol>
+</aside>
+<section>
+<form class="buscar" method="get"><input name="buscar" value=
+"{{BUSCAR}}" placeholder=
+"Buscar producto"><button>Buscar</button></form>
+<div class="scroll">{{PRODUCTOS}}
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Producto</th>
+<th>Stock</th>
+<th>Precio</th>
+<th>Movimientos</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+</section>
+</div>
+</main>
+</body>
+</html>

@@ -1,2 +1,44 @@
-<!doctype html><html lang=es><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Estudiantes</title><link rel=stylesheet href=/estilos.css></head><body><main><header><h1>Control de Estudiantes</h1><p>Promedios, estados y ranking</p></header><p class=mensaje>{{MENSAJE}}</p><section class=grid><form action=/guardar method=post><h2>Nuevo estudiante</h2><input name=matricula placeholder=Matrícula required><input name=nombre placeholder="Nombre completo" required><input name=carrera placeholder=Carrera required><input name=p1 type=number min=0 max=10 step=.1 placeholder="Parcial 1" required><input name=p2 type=number min=0 max=10 step=.1 placeholder="Parcial 2" required><input name=p3 type=number min=0 max=10 step=.1 placeholder="Parcial 3" required><button>Calcular y guardar</button></form><section><h2>Ranking por promedio</h2><table><tr><th>Matrícula</th><th>Nombre</th><th>Carrera</th><th>Promedio</th><th>Estado</th></tr>{{ALUMNOS}}</table></section></section></main></body></html>
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Estudiantes</title>
+<link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+<main>
+<header>
+<h1>Control de Estudiantes</h1>
+<p>Promedios, estados y ranking</p>
+</header>
+<p class="mensaje">{{MENSAJE}}</p>
+<section class="grid">
+<form action="/guardar" method="post">
+<h2>Nuevo estudiante</h2>
+<input name="matricula" placeholder="Matrícula" required=
+""><input name="nombre" placeholder="Nombre completo" required=
+""><input name="carrera" placeholder="Carrera" required=
+""><input name="p1" type="number" min="0" max="10" step=".1"
+placeholder="Parcial 1" required=""><input name="p2" type="number"
+min="0" max="10" step=".1" placeholder="Parcial 2" required=
+""><input name="p3" type="number" min="0" max="10" step=".1"
+placeholder="Parcial 3" required=""><button>Calcular y
+guardar</button></form>
+<section>
+<h2>Ranking por promedio</h2>
+{{ALUMNOS}}
+<table>
+<tr>
+<th>Matrícula</th>
+<th>Nombre</th>
+<th>Carrera</th>
+<th>Promedio</th>
+<th>Estado</th>
+</tr>
+</table>
+</section>
+</section>
+</main>
+</body>
+</html>

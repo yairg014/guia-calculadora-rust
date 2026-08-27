@@ -14,7 +14,9 @@ struct Nota {
 }
 
 fn main() {
-    let servidor = Server::http("0.0.0.0:8101").expect("No se pudo iniciar el servidor");
+    // Inicia el servidor web local del bloc de notas.
+    let servidor = Server::http("0.0.0.0:8101")
+        .expect("No se pudo iniciar el servidor en el puerto 8101. ¿Está ocupado?");
     println!("Bloc de Notas: http://localhost:8101");
     for mut solicitud in servidor.incoming_requests() {
         let ruta = solicitud.url().to_string();

@@ -12,6 +12,7 @@ struct Contacto {
 }
 
 fn main() {
+    // Inicia el servidor web local de la agenda de contactos.
     let servidor = Server::http("0.0.0.0:8109")
         .expect("No se pudo iniciar el servidor en el puerto 8109. ¿Está ocupado?");
     println!("Agenda de Contactos: http://localhost:8109");

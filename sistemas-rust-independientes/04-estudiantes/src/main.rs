@@ -10,6 +10,7 @@ struct Estudiante {
     p3: f64,
 }
 fn main() {
+    // Inicia el servidor web local de control de estudiantes.
     let s = Server::http("0.0.0.0:8104")
         .expect("No se pudo iniciar el servidor en el puerto 8104. ¿Está ocupado?");
     println!("Estudiantes: http://localhost:8104");

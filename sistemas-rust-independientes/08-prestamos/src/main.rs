@@ -19,6 +19,7 @@ struct Abono {
 }
 
 fn main() {
+    // Inicia el servidor web local de préstamos.
     let servidor = Server::http("0.0.0.0:8108")
         .expect("No se pudo iniciar el servidor en el puerto 8108. ¿Está ocupado?");
     println!("Préstamos: http://localhost:8108");

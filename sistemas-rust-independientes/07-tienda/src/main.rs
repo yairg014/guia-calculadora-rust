@@ -15,6 +15,7 @@ struct Venta {
     fecha: String,
 }
 fn main() {
+    // Inicia el servidor web local de la tienda.
     let s = Server::http("0.0.0.0:8107")
         .expect("No se pudo iniciar el servidor en el puerto 8107. ¿Está ocupado?");
     println!("Tienda: http://localhost:8107");
