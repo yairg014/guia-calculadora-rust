@@ -1,0 +1,7 @@
+[package]
+name = "guia_calculadora_rust"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+tiny_http = "0.12"

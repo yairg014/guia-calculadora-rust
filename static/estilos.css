@@ -1,0 +1,9 @@
+/* Interfaz directa: una sola calculadora, fondo gris y acento verde para las acciones matemáticas. */
+* { box-sizing: border-box; }
+body { display: grid; min-height: 100vh; margin: 0; place-items: center; background: #e7ebe7; color: #1f3340; font-family: Arial, sans-serif; }
+.calculadora { width: min(420px, calc(100% - 24px)); padding: 22px; background: #fffefa; border-top: 4px solid #35be88; box-shadow: 0 14px 30px #1f334022; }
+h1 { margin: 0 0 20px; color: #203b4a; font-size: 26px; text-align: center; }
+input { width: 100%; padding: 17px 14px; border: 1px solid #cbd6ce; background: #f5f7f4; color: #1f3340; font: 23px monospace; text-align: right; } input:focus { outline: 2px solid #35be88; }
+.resultado { min-height: 71px; padding: 11px 14px; background: #edf5ef; border: 1px solid #d6e6dc; text-align: right; }.resultado strong { color: #18513b; font: 700 31px monospace; }.resultado p { min-height: 14px; margin: 5px 0 0; color: #a83e45; font-size: 11px; }
+.teclas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; margin-top: 15px; }.teclas button { min-height: 47px; border: 1px solid #d4ddd7; background: #fafbf8; color: #233943; font: 16px Arial, sans-serif; cursor: pointer; }.teclas button:hover { background: #edf4ef; }.teclas .operador { color: #176545; background: #e3f3ea; }.teclas .limpiar { color: #af4147; background: #fae9e8; }.teclas .borrar { grid-column: span 2; }.teclas .igual { grid-column: span 2; color: white; background: #248b63; border-color: #248b63; font-size: 21px; }
+@media (max-width: 430px) { .calculadora { padding: 15px; } }

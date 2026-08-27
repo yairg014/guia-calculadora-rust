@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Científica</title>
+  <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+  <main class="calculadora">
+    <h1>Calculadora Científica</h1>
+    <form action="/calcular" method="post">
+      <input id="expresion" name="expresion" value="{{EXPRESION}}" autocomplete="off" autofocus>
+      <div class="resultado"><strong>{{RESULTADO}}</strong><p>{{ERROR}}</p></div>
+      <div class="teclas">
+        <button type="button" onclick="agregar('sin(')">sin</button><button type="button" onclick="agregar('cos(')">cos</button><button type="button" onclick="agregar('tan(')">tan</button><button type="button" onclick="agregar('sqrt(')">√</button>
+        <button type="button" onclick="agregar('ln(')">ln</button><button type="button" onclick="agregar('log(')">log</button><button type="button" onclick="agregar('pi')">π</button><button type="button" onclick="agregar('^')">xʸ</button>
+        <button type="button" onclick="agregar('7')">7</button><button type="button" onclick="agregar('8')">8</button><button type="button" onclick="agregar('9')">9</button><button type="button" class="operador" onclick="agregar('/')">÷</button>
+        <button type="button" onclick="agregar('4')">4</button><button type="button" onclick="agregar('5')">5</button><button type="button" onclick="agregar('6')">6</button><button type="button" class="operador" onclick="agregar('*')">×</button>
+        <button type="button" onclick="agregar('1')">1</button><button type="button" onclick="agregar('2')">2</button><button type="button" onclick="agregar('3')">3</button><button type="button" class="operador" onclick="agregar('-')">−</button>
+        <button type="button" class="limpiar" onclick="limpiar()">AC</button><button type="button" onclick="agregar('0')">0</button><button type="button" onclick="agregar('.')">.</button><button type="button" class="operador" onclick="agregar('+')">+</button>
+        <button type="button" onclick="agregar('(')">(</button><button type="button" onclick="agregar(')')">)</button><button type="button" onclick="agregar('x')">x</button><button type="button" onclick="agregar('=')">=</button>
+        <button type="button" class="borrar" onclick="borrar()">⌫</button><button type="submit" class="igual">=</button>
+      </div>
+    </form>
+  </main>
+  <script>
+    const entrada = document.getElementById('expresion');
+    function agregar(valor) { entrada.value = entrada.value === '0' && !['+', '-', '*', '/', ')', '='].includes(valor) ? valor : entrada.value + valor; entrada.focus(); }
+    function limpiar() { entrada.value = '0'; entrada.focus(); }
+    function borrar() { entrada.value = entrada.value.length > 1 ? entrada.value.slice(0, -1) : '0'; entrada.focus(); }
+  </script>
+</body>
+</html>
